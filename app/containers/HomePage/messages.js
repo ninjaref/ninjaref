@@ -7,12 +7,12 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   startProjectHeader: {
-    id: 'boilerplate.containers.HomePage.start_project.header',
-    defaultMessage: 'Start your next react project in seconds',
+    id: 'ninjaref.containers.HomePage.start_project.header',
+    defaultMessage: 'Welcome to Ninja Reference!',
   },
   startProjectMessage: {
-    id: 'boilerplate.containers.HomePage.start_project.message',
-    defaultMessage: 'A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices',
+    id: 'ninjaref.containers.HomePage.start_project.message',
+    defaultMessage: 'Ninja Reference is an open-source effort to improve the availability and presentation of data on American Ninja Warrior. We track competitors across seasons, courses, and obstacles\u2014allowing for the level of analysis often found in more traditional sports.',
   },
   trymeHeader: {
     id: 'boilerplate.containers.HomePage.tryme.header',

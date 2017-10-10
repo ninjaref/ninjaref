@@ -10,12 +10,16 @@ export default defineMessages({
     id: 'ninjaref.components.Header.home',
     defaultMessage: 'Home',
   },
-  about: {
-    id: 'ninjaref.components.Header.about',
-    defaultMessage: 'About',
-  },
   leaderboard: {
     id: 'ninjaref.components.Header.leaderboard',
     defaultMessage: 'Leaderboard',
+  },
+  stats: {
+    id: 'ninjaref.components.Header.stats',
+    defaultMessage: 'Stats',
+  },
+  contribute: {
+    id: 'ninjaref.components.Header.contribute',
+    defaultMessage: 'Contribute',
   },
 });

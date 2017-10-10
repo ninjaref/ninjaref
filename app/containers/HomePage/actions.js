@@ -16,19 +16,19 @@
  */
 
 import {
-  CHANGE_USERNAME,
+  ENTER_NINJA,
 } from './constants';
 
 /**
- * Changes the input field of the form
+ * Changes the input field of the form.
  *
- * @param  {name} name The new text of the input field
+ * @param  {name} name The new text of the input field.
  *
- * @return {object}    An action object with a type of CHANGE_USERNAME
+ * @return {object}    An action object with a type of `ENTER_NINJA`.
  */
-export function changeUsername(name) {
+export function enterNinja(name) {
   return {
-    type: CHANGE_USERNAME,
+    type: ENTER_NINJA,
     name,
   };
 }

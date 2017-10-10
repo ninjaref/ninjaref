@@ -1,13 +1,13 @@
 /*
- * App Actions
+ * Actions
  *
- * Actions change things in your application
  * Since this boilerplate uses a uni-directional data flow, specifically redux,
  * we have these actions which are the only way your application interacts with
- * your application state. This guarantees that your state is up to date and nobody
- * messes it up weirdly somewhere.
+ * your application state. This guarantees that your state is up to date and
+ * nobody messes it up weirdly somewhere.
  *
  * To add a new Action:
+ *
  * 1) Import your constant
  * 2) Add a function like this:
  *    export function yourAction(var) {
@@ -16,48 +16,48 @@
  */
 
 import {
-  LOAD_REPOS,
-  LOAD_REPOS_SUCCESS,
-  LOAD_REPOS_ERROR,
+  FETCH_NINJAS,
+  FETCH_NINJAS_SUCCESS,
+  FETCH_NINJAS_ERROR,
 } from './constants';
 
 /**
- * Load the repositories, this action starts the request saga
+ * Fetch the competitors.
  *
- * @return {object} An action object with a type of LOAD_REPOS
+ * @return {object} An action object with a type of `FETCH_NINJAS`.
  */
-export function loadRepos() {
+export function fetchNinjas() {
   return {
-    type: LOAD_REPOS,
+    type: FETCH_NINJAS,
   };
 }
 
 /**
- * Dispatched when the repositories are loaded by the request saga
+ * Dispatched when the competitors are fetched by the request saga.
  *
- * @param  {array} repos The repository data
- * @param  {string} username The current username
+ * @param  {array} ninjas The list of competitors.
  *
- * @return {object}      An action object with a type of LOAD_REPOS_SUCCESS passing the repos
+ * @return {object}      An action object with a type of `FETCH_NINJAS_SUCCESS`
+ *                       passing the list.
  */
-export function reposLoaded(repos, username) {
+export function ninjasFetched(ninjas) {
   return {
     type: LOAD_REPOS_SUCCESS,
-    repos,
-    username,
+    ninjas,
   };
 }
 
 /**
- * Dispatched when loading the repositories fails
+ * Dispatched when fetching the list of competitors fails.
  *
  * @param  {object} error The error
  *
- * @return {object}       An action object with a type of LOAD_REPOS_ERROR passing the error
+ * @return {object}       An action object with a type of `FETCH_NINJAS_ERROR`
+ *                        passing the error.
  */
-export function repoLoadingError(error) {
+export function ninjaFetchError(error) {
   return {
-    type: LOAD_REPOS_ERROR,
+    type: FETCH_NINJAS_ERROR,
     error,
   };
 }

@@ -7,11 +7,15 @@ import { defineMessages } from 'react-intl';
 
 export default defineMessages({
   home: {
-    id: 'boilerplate.components.Header.home',
+    id: 'ninjaref.components.Header.home',
     defaultMessage: 'Home',
   },
-  features: {
-    id: 'boilerplate.components.Header.features',
-    defaultMessage: 'Features',
+  about: {
+    id: 'ninjaref.components.Header.about',
+    defaultMessage: 'About',
+  },
+  leaderboard: {
+    id: 'ninjaref.components.Header.leaderboard',
+    defaultMessage: 'Leaderboard',
   },
 });

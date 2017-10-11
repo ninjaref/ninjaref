@@ -7,13 +7,13 @@ class Searchahead extends React.Component {
     super(props);
 
     this.state = {
-      suggestions: []
+      suggestions: [],
     };
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:9000/v1/ninjas`)
-      .then(res => {
+    axios.get('http://localhost:9000/v1/ninjas')
+      .then((res) => {
         this.setState({ suggestions: res.data.data });
       });
   }
@@ -21,7 +21,7 @@ class Searchahead extends React.Component {
   render() {
     return (
       <Typeahead
-        labelKey={option => `${option.FirstName} ${option.LastName}`}
+        labelKey={(option) => `${option.FirstName} ${option.LastName}`}
         options={this.state.suggestions}
         placeholder="Enter a name ..."
       />

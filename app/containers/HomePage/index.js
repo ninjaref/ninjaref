@@ -11,7 +11,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import { Form, FormGroup, Label } from 'reactstrap';
 
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';

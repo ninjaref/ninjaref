@@ -17,7 +17,6 @@ export function* getNinjas() {
   try {
     // Call our request helper (see 'utils/request').
     const ninjas = yield call(request, requestURL).data;
-    console.log('Fetched', ninjas);
     yield put(ninjasFetched(ninjas));
   } catch (err) {
     yield put(ninjaFetchError(err));

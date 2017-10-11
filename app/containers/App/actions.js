@@ -42,7 +42,7 @@ export function fetchNinjas() {
  */
 export function ninjasFetched(ninjas) {
   return {
-    type: LOAD_REPOS_SUCCESS,
+    type: FETCH_NINJAS_SUCCESS,
     ninjas,
   };
 }

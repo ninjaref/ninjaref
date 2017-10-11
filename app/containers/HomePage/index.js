@@ -17,6 +17,7 @@ import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
 import H2 from 'components/H2';
+import Searchahead from 'components/Searchahead';
 import messages from './messages';
 import { fetchNinjas } from '../App/actions';
 import { enterNinja } from './actions';
@@ -42,7 +43,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
           <Form>
             <FormGroup>
               <Label for="query">Get started by entering a competitor&#39;s name:</Label>
-              <Input type="text" name="search" id="query" />
+              <Searchahead />
             </FormGroup>
           </Form>
         </div>

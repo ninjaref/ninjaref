@@ -212,6 +212,7 @@
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "babel-polyfill": "6.23.0",
     "bootstrap": "^4.0.0-beta",
     "chalk": "^1.1.3",
@@ -230,6 +231,7 @@
     "minimist": "1.2.0",
     "prop-types": "15.5.10",
     "react": "15.6.1",
+    "react-bootstrap-typeahead": "^2.0.0-alpha.3",
     "react-dom": "15.6.1",
     "react-helmet": "5.1.3",
     "react-intl": "2.3.0",

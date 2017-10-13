@@ -5,9 +5,7 @@
  */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
 
-import messages from './messages';
 import Leaderboard from 'components/Leaderboard';
 
 export default class LeaderboardPage extends React.Component { // eslint-disable-line react/prefer-stateless-function

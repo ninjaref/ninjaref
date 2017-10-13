@@ -13,13 +13,6 @@ class Leaderboard extends React.Component {
     };
   }
 
-  fixNames(data) {
-    data.forEach(function (item, index) {
-      data[index].Name = item.Ninja.FirstName + ' ' + item.Ninja.LastName;
-    });
-    return data;
-  }
-
   componentDidMount() {
     axios.get('http://localhost:9000/v1/leaderboard/overall')
       .then((res) => {
@@ -27,14 +20,23 @@ class Leaderboard extends React.Component {
       });
   }
 
+  /* eslint-disable no-param-reassign */
+  fixNames(data) {
+    data.forEach((item, index) => {
+      data[index].Name = `${item.Ninja.FirstName} ${item.Ninja.LastName}`;
+    });
+    return data;
+  }
+  /* eslint-enable no-param-reassign */
+
   render() {
     return (
       <BootstrapTable data={this.state.overall} striped hover>
-        <TableHeaderColumn isKey dataField='Name'>Name</TableHeaderColumn>
-        <TableHeaderColumn dataField='Speed'>Speed</TableHeaderColumn>
-        <TableHeaderColumn dataField='Consistency'>Consistency</TableHeaderColumn>
-        <TableHeaderColumn dataField='Success'>Success</TableHeaderColumn>
-        <TableHeaderColumn dataField='Rating'>Ninja Rating</TableHeaderColumn>
+        <TableHeaderColumn isKey dataField="Name">Name</TableHeaderColumn>
+        <TableHeaderColumn dataField="Speed">Speed</TableHeaderColumn>
+        <TableHeaderColumn dataField="Consistency">Consistency</TableHeaderColumn>
+        <TableHeaderColumn dataField="Success">Success</TableHeaderColumn>
+        <TableHeaderColumn dataField="Rating">Ninja Rating</TableHeaderColumn>
       </BootstrapTable>
     );
   }

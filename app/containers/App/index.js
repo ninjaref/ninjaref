@@ -9,12 +9,13 @@ import { Switch, Route } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import LeaderboardPage from 'containers/LeaderboardPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.css';
+import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
 export default function App() {
   return (
@@ -29,7 +30,7 @@ export default function App() {
         </Helmet>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/features" component={FeaturePage} />
+          <Route path="/leaderboard" component={LeaderboardPage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
       </Container>

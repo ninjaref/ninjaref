@@ -45,22 +45,22 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">
+                <NavLink href="/">
                   <FormattedMessage {...messages.home} />
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">
+                <NavLink href="/leaderboard">
                   <FormattedMessage {...messages.leaderboard} />
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">
+                <NavLink href="/stats">
                   <FormattedMessage {...messages.stats} />
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">
+                <NavLink href="/contribute">
                   <FormattedMessage {...messages.contribute} />
                 </NavLink>
               </NavItem>

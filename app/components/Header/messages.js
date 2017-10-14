@@ -22,4 +22,16 @@ export default defineMessages({
     id: 'ninjaref.components.Header.contribute',
     defaultMessage: 'Contribute',
   },
+  seasons: {
+    id: 'ninjaref.components.Header.seasons',
+    defaultMessage: 'Seasons',
+  },
+  courses: {
+    id: 'ninjaref.components.Header.courses',
+    defaultMessage: 'Courses',
+  },
+  obstacles: {
+    id: 'ninjaref.components.Header.obstacles',
+    defaultMessage: 'Obstacles',
+  },
 });

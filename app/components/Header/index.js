@@ -10,6 +10,10 @@ import {
   Nav,
   NavItem,
   NavLink,
+  NavDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
 } from 'reactstrap';
 
 import messages from './messages';
@@ -25,14 +29,22 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
     this.state = {
       isOpen: false,
+      dropdownOpen: false,
     };
   }
 
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
+    });
+  }
+
+  toggleDropdown() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen,
     });
   }
 
@@ -54,11 +66,22 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
                   <FormattedMessage {...messages.leaderboard} />
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/stats">
+              <NavDropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
+                <DropdownToggle nav caret>
                   <FormattedMessage {...messages.stats} />
-                </NavLink>
-              </NavItem>
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>
+                    <FormattedMessage {...messages.seasons} />
+                  </DropdownItem>
+                  <DropdownItem>
+                    <FormattedMessage {...messages.courses} />
+                  </DropdownItem>
+                  <DropdownItem>
+                    <FormattedMessage {...messages.obstacles} />
+                  </DropdownItem>
+                </DropdownMenu>
+              </NavDropdown>
               <NavItem>
                 <NavLink href="/contribute">
                   <FormattedMessage {...messages.contribute} />

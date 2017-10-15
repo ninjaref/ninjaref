@@ -16,6 +16,7 @@ import Footer from 'components/Footer';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
+import 'react-select/dist/react-select.css';
 
 export default function App() {
   return (

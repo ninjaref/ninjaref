@@ -1,6 +1,5 @@
 /**
  * Test the HomePage
- */
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
@@ -8,7 +7,6 @@ import { IntlProvider } from 'react-intl';
 
 import ReposList from 'components/ReposList';
 import { HomePage, mapDispatchToProps } from '../index';
-import { changeUsername } from '../actions';
 import { loadRepos } from '../../App/actions';
 
 describe('<HomePage />', () => {
@@ -25,7 +23,7 @@ describe('<HomePage />', () => {
       <IntlProvider locale="en">
         <HomePage
           username="Not Empty"
-          onChangeUsername={() => {}}
+          onChangeUsername={() => { }}
           onSubmitForm={submitSpy}
         />
       </IntlProvider>
@@ -38,7 +36,7 @@ describe('<HomePage />', () => {
     mount(
       <IntlProvider locale="en">
         <HomePage
-          onChangeUsername={() => {}}
+          onChangeUsername={() => { }}
           onSubmitForm={submitSpy}
         />
       </IntlProvider>
@@ -52,7 +50,7 @@ describe('<HomePage />', () => {
       <IntlProvider locale="en">
         <HomePage
           username=""
-          onChangeUsername={() => {}}
+          onChangeUsername={() => { }}
           onSubmitForm={submitSpy}
         />
       </IntlProvider>
@@ -93,7 +91,7 @@ describe('<HomePage />', () => {
 
       it('should preventDefault if called with event', () => {
         const preventDefault = jest.fn();
-        const result = mapDispatchToProps(() => {});
+        const result = mapDispatchToProps(() => { });
         const evt = { preventDefault };
         result.onSubmitForm(evt);
         expect(preventDefault).toHaveBeenCalledWith();
@@ -101,3 +99,4 @@ describe('<HomePage />', () => {
     });
   });
 });
+*/

@@ -78,6 +78,10 @@ class Leaderboard extends React.Component {
   }
   /* eslint-enable no-param-reassign */
 
+  formatter(cell, row) {
+    return `<a href="/profile/${row.Ninja.ID}">${cell}</a>`;
+  }
+
   render() {
     return (
       <div>
@@ -93,7 +97,7 @@ class Leaderboard extends React.Component {
           </Button>
         </ButtonGroup>
         <StyledTable data={this.state.active} striped hover>
-          <TableHeaderColumn isKey dataField="Name">
+          <TableHeaderColumn isKey dataField="Name" dataFormat={this.formatter}>
             <FormattedMessage {...messages.name} />
           </TableHeaderColumn>
           <TableHeaderColumn dataField="Speed">

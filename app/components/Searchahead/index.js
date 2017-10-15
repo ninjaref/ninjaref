@@ -22,7 +22,7 @@ class Searchahead extends React.Component {
   componentDidMount() {
     axios.get('http://localhost:9000/v1/ninjas')
       .then((res) => {
-        this.setState({ suggestions: res.data.data });
+        this.setState({ suggestions: this.fixNames(res.data.data) });
       });
   }
 
@@ -30,9 +30,14 @@ class Searchahead extends React.Component {
     this.props.history.push(`/profile/${val.ID}`);
   }
 
-  renderName(option) {
-    return `${option.FirstName} ${option.LastName}`;
+  /* eslint-disable no-param-reassign */
+  fixNames(data) {
+    data.forEach((item, index) => {
+      data[index].Name = `${item.FirstName} ${item.LastName}`;
+    });
+    return data;
   }
+  /* eslint-enable no-param-reassign */
 
   render() {
     return (
@@ -41,8 +46,8 @@ class Searchahead extends React.Component {
           <Label for="query">Get started by entering a competitor&#39;s name:</Label>
           <Select
             name="form-field-name"
-            optionRenderer={this.renderName}
-            valueKey="FirstName"
+            valueKey="Name"
+            labelKey="Name"
             options={this.state.suggestions}
             onChange={this.handleChange}
           />

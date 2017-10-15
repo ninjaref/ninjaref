@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Form, FormGroup, Label } from 'reactstrap';
 import { withRouter } from 'react-router';
 import Select from 'react-select';
@@ -6,7 +7,7 @@ import axios from 'axios';
 
 class Searchahead extends React.Component {
   static propTypes = {
-    history: React.PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired,
   }
 
   constructor(props) {

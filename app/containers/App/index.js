@@ -10,6 +10,7 @@ import { Container } from 'reactstrap';
 
 import HomePage from 'containers/HomePage/Loadable';
 import LeaderboardPage from 'containers/LeaderboardPage/Loadable';
+import ProfilePage from 'containers/ProfilePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -23,15 +24,13 @@ export default function App() {
     <div>
       <Header />
       <Container>
-        <Helmet
-          titleTemplate="ninjaref - %s"
-          defaultTitle="ninjaref"
-        >
+        <Helmet titleTemplate="ninjaref - %s" defaultTitle="ninjaref">
           <meta name="description" content="Ninja Reference: Bringing analytics to American Ninja Warrior." />
         </Helmet>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/leaderboard" component={LeaderboardPage} />
+          <Route path="/profile/:id" component={ProfilePage} />
           <Route path="" component={NotFoundPage} />
         </Switch>
       </Container>
